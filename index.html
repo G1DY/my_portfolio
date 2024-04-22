@@ -14,11 +14,11 @@
             <nav>
                 <img src="Images/logo1.jpg" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <!-- <i class="fas fa-times" onclick="closemenu()"></i> -->
                 </ul>
                 <!-- <i class="fas fa-bars" onclick="openmenu()"></i> -->
@@ -140,12 +140,13 @@
                     <a href="https://docs.google.com/document/d/1jHCcI1rKKOX0pn07D6v0GlRTx9Yd39DM63iBta0o4cg/edit?usp=sharing" class="btn btn2">View Resume</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <!-- <span id="msg"> helllo</span> -->
                 </div>
             </div>
         </div>
@@ -166,6 +167,22 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
-    
+    <form name="submit-to-google-sheet">
+  <!-- <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button> -->
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzDNqdqiJFzq28NOOHOnoFcruD7FJctp-uQSHAowRmkjZNtFSzm4Mz67NsfmnaA7FYX/exec'
+  const form = document.forms['submit-to-google-sheet']
+  <!-- const msg = getElementById("msg") -->
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', "Message Sent successfuly"))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>   
 </body>
 </html>
