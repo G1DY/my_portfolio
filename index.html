@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gideon Sitienei Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://kit.fontawesome.com/90f5da9eb9.js" crossorigin="anonymous"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -13,13 +13,15 @@
         <div class="container">
             <nav>
                 <img src="Images/logo1.jpg" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
+                    <!-- <i class="fas fa-times" onclick="closemenu()"></i> -->
                 </ul>
+                <!-- <i class="fas fa-bars" onclick="openmenu()"></i> -->
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
@@ -102,6 +104,7 @@
                     <div class="layer">
                         <h3>AI Essentials</h3>
                         <p>Landing Page Created using AI-Uizard, Galileo AI, Canva, Chatgpt</p>
+                        <a href="http://www.loom.com/share/38accc3d35354ba5a0215fc2c9dc66b7?sid=3e50e227-4490-4dd6-bdba-245ebcad5fec">AI Essentials</a>
                     </div>
                 </div>
                 <div class="project">
@@ -109,6 +112,7 @@
                     <div class="layer">
                         <h3>E-Commerce Website</h3>
                         <p>An E-Commerce website developed using Django FrameWork for BackEnd and Jinja2 templates for FrontEnd</p>
+                        <a href="http://github.com/G1DY/ShowPop_Django_project">E-commerce website</a>
                     </div>
                 </div>
                 <div class="project">
@@ -116,11 +120,36 @@
                     <div class="layer">
                         <h3>Saloon Booking System</h3>
                         <p>A saloon booking system developed using Flask FrameWork for BackEnd and ReactJs for FrontEnd</p>
+                        <a href="http://github.com/G1DY/HairArtHub">Saloon System</a>
                     </div>
                 </div>
             </div>
 
         </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me:</h1>
+                    <p>Email: sitienei.gedion@gmail.com</p>
+                    <p>Phone Number: +254726222400</p>
+                    <div class="socials">
+                        <a href="http://www.linkedin.com/in/gideonsitienei/">linkedin</a>
+                    </div>
+                    <a href="https://docs.google.com/document/d/1jHCcI1rKKOX0pn07D6v0GlRTx9Yd39DM63iBta0o4cg/edit?usp=sharing" class="btn btn2">View Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">copyright@gideon.sitienei</div>
     </div>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
