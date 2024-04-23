@@ -141,10 +141,10 @@
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <input id="name" type="text" name="Name" placeholder="Your Name" required>
+                        <input id="email" type="email" name="Email" placeholder="Your Email" required>
+                        <textarea id="message" name="Message" rows="4" placeholder="Your Message"></textarea>
+                        <button id="submit-message" type="submit" class="btn btn2">Submit</button>
                     </form>
                     <!-- <span id="msg"> helllo</span> -->
                 </div>
@@ -180,8 +180,16 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', "Message Sent successfuly"))
-      .catch(error => console.error('Error!', error.message))
+      .then(response => {
+        document.getElementById('email').value = null;
+        document.getElementById('name').value = null;
+        document.getElementById('message').value = null;
+        document.getElementById('submit-message').disabled = true;
+        alert('Success!', "Message Sent successfuly");
+        document.getElementById('submit-message').disabled = false;
+
+      })
+      .catch(error => alert('Error!', error.message))
   })
 </script>   
 </body>
