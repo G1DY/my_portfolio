@@ -46,6 +46,7 @@ nav ul li a{
     text-decoration: none;
     font-size: medium;
     position: relative;
+    right: 0;
 }
 nav ul li a::after{
     content: '';
