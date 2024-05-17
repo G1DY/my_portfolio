@@ -30,7 +30,7 @@ nav{
     flex-wrap: wrap;
     position: fixed;
     top: 0;
-    background-color: #080808;
+    background-color: #59938383;
 }
 
 .logo{
@@ -40,7 +40,7 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
-    left: 0;
+    color: #000;
 
 }
 nav ul li a{
