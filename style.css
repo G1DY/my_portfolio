@@ -31,6 +31,7 @@ nav{
     position: fixed;
     top: 0;
     background-color: #59938383;
+    width: 100%;
 }
 
 .logo{
