@@ -30,6 +30,7 @@ nav{
     flex-wrap: wrap;
     position: fixed;
     left: 0;
+    top: 220px;
 }
 
 .logo{
